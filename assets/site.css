@@ -1,0 +1,83 @@
+/* ------------------------------------------------------------
+   Minimal text blog.
+   One font (Helvetica), black text, blue for links and emphasis.
+   To make the text column wider or narrower, change 33em below.
+   ------------------------------------------------------------ */
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  padding: 0 16px;            /* narrow side margins on phones */
+  background: #ffffff;
+  color: #000000;
+  font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+header, main {
+  max-width: 33em;            /* the narrow text column */
+  margin: 0 auto;
+}
+
+/* Name and menu at the top of every page except the home page */
+header { text-align: center; padding-top: 40px; }
+.site-name { color: #000000; font-weight: bold; text-decoration: none; }
+nav { margin-top: 6px; }
+nav a { margin: 0 10px; }
+
+main { padding: 28px 0 72px; }
+
+/* Body text is justified */
+p, li, blockquote, dd {
+  text-align: justify;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+/* All headings are centred */
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+  color: #000000;
+  font-weight: bold;
+  line-height: 1.25;
+}
+h1 { font-size: 1.45em; margin: 0.4em 0 0.3em; }
+h2 { font-size: 1.15em; margin: 2em 0 0.6em; }
+h3, h4, h5, h6 { font-size: 1em; margin: 1.6em 0 0.5em; }
+
+/* Blue is used only for links and emphasis */
+a { color: #0000ee; text-decoration: none; }
+a:hover { text-decoration: underline; }
+em { color: #0000ee; font-style: normal; }
+strong { color: #0000ee; font-weight: bold; }
+
+/* Pictures fit the column and sit in the centre */
+img { display: block; max-width: 100%; height: auto; margin: 1.6em auto 0.6em; }
+.caption { text-align: center; font-size: 0.9em; margin-top: 0; }
+
+blockquote { margin: 1.4em 1.6em; padding: 0; }
+hr { border: 0; border-top: 1px solid #000000; width: 30%; margin: 2.4em auto; }
+ul, ol { padding-left: 1.4em; }
+code, pre, kbd, samp { font-family: inherit; font-size: 1em; }
+pre { white-space: pre-wrap; }
+table { border-collapse: collapse; margin: 1.4em auto; }
+th, td { border-top: 1px solid #000000; padding: 0.3em 0.6em; text-align: left; }
+
+/* Centred pages: Home, Blog, Contact */
+.center p, .center li { text-align: center; }
+.center ul { list-style: none; padding: 0; }
+
+.home-title { margin-top: 2.4em; }
+.home-nav { margin: 1.6em 0; }
+.home-nav li { margin: 0.25em 0; }
+
+/* Lists of posts */
+.post-list { list-style: none; padding: 0; }
+.post-list li { text-align: center; margin: 0.45em 0; }
+.post-list .date { margin-left: 0.4em; font-size: 0.9em; }
+
+/* Date under a post title, and the link at the bottom of a post */
+p.date { text-align: center; font-size: 0.9em; margin: 0 0 2em; }
+.back { text-align: center; margin-top: 3.2em; }

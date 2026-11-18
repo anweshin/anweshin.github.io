@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+  {% feed_meta %}
+</head>
+<body>
+  {% unless page.layout == "home" %}
+  <header>
+    <a class="site-name" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <nav>
+      <a href="{{ '/about/' | relative_url }}">About</a>
+      <a href="{{ '/blog/' | relative_url }}">Blog</a>
+      <a href="{{ '/contact/' | relative_url }}">Contact</a>
+    </nav>
+  </header>
+  {% endunless %}
+  <main{% if page.align == "center" or page.layout == "home" %} class="center"{% endif %}>
+{{ content }}
+  </main>
+</body>
+</html>

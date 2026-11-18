@@ -1,0 +1,42 @@
+# ------------------------------------------------------------
+# SITE SETTINGS — edit these two lines, then commit.
+# ------------------------------------------------------------
+title: Anwesh Mishra
+description: Notes, essays and pictures.
+
+# Indian time, so a post dated today appears today.
+timezone: Asia/Kolkata
+
+# ------------------------------------------------------------
+# You do not need to change anything below this line.
+# ------------------------------------------------------------
+
+# Blog post addresses look like: /blog/my-post-title/
+permalink: /blog/:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+plugins:
+  - jekyll-feed
+
+# Every post uses the "post" layout and every page uses the
+# "page" layout automatically, so you never have to type it.
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+
+# Files kept in the repository but not published on the site.
+exclude:
+  - README.md
+  - post-template.md
